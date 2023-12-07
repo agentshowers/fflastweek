@@ -1,0 +1,92 @@
+#app {
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
+  max-width: 1500px;
+}
+
+.table-wrapper {
+  width: 40%;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header styles */
+th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Table row styles */
+tr {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Table cell styles */
+td {
+  padding: 10px;
+}
+
+/* Alternate row background color */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Styling for the team name column */
+.team-name {
+  font-weight: bold;
+}
+
+/* Styling for the record column */
+.record {
+  font-weight: bold;
+  color: #777;
+}
+
+/* Styling for the points scored column */
+.points {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* Styles for the score input section */
+.score-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.team-input {
+  width: 40%;
+}
+
+.team-input input {
+  width: 100%;
+  padding: 8px;
+}
+
+.score-input button {
+  background-color: #007BFF;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.games-wrapper {
+  width: 50%;
+}
+
+.game {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 25px;
+}

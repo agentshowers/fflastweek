@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Playoffs</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th class="team-name">Team</th>
+            <th class="record">W-L</th>
+            <th class="points">Points for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="team in teams">
+            <td class="team-name">{{team.name}}</td>
+            <td class="record">{{team.wins}} - {{team.losses}}</td>
+            <td class="points">{{team.points}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="games-wrapper">
+      <div v-for="game in games" class="game">
+        <div class="team-input">
+          <label for="team1">{{game.team1Name}}</label>
+          <input type="number" v-model="game.team1Score" placeholder="Enter Score" min="0">
+        </div>
+        <div class="team-input">
+          <label for="team2">{{game.team2Name}}</label>
+          <input type="number" v-model="game.team2Score" placeholder="Enter Score" min="0">
+        </div>
+      </div>
+      
+      <button @click="submitScores()">Recalculate</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
