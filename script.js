@@ -26,11 +26,16 @@ const App = {
   },
   
   created() {
-    this.resetTeams();
-    this.resetGames();
+    this.reset();
   },
 
   methods: {
+    reset() {
+      this.resetTeams();
+      this.resetGames();
+      this.sortTeams();
+    },
+
     resetTeams() {
       this.teams = [
         new Team("Alvin and the Draftcunts", "chris1747", 10, 3, 1818.92),
@@ -48,7 +53,7 @@ const App = {
       ];
     },
 
-    resetGames () {
+    resetGames() {
       this.games = [
         new Game("Unsolicited Diggs Pics", 108.69, "Je ne saquon", 120.99),
         new Game("King Sacko", 102.95, "Alvin and the Draftcunts", 123.69),
@@ -57,10 +62,9 @@ const App = {
         new Game("The Fuckest Uppest", 107.72, "Dak Lives Matter", 103.24),
         new Game("Glasgow Quitters/Losers", 105.7, "Sacks in the city", 105.81),
       ];
-      this.sortTeams();
     },
 
-    submitScores() {
+    onScoreChange() {
       this.resetTeams();
       this.sortTeams();
     },
