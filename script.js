@@ -21,19 +21,13 @@ const App = {
   data() {
     return {
       teams: [],
-      games: [
-        new Game("Unsolicited Diggs Pics", 108.69, "Je ne saquon", 120.99),
-        new Game("King Sacko", 102.95, "Alvin and the Draftcunts", 123.69),
-        new Game("Trevor able to Gibb Chase", 109.55, "The big Lambowski", 121.37),
-        new Game("The Glove Don't Fit", 119.59, "Najee Smugglers", 83.93),
-        new Game("The Fuckest Uppest", 107.72, "Dak Lives Matter", 103.24),
-        new Game("Glasgow Quitters/Losers", 105.7, "Sacks in the city", 105.81),
-      ]
+      games: []
     }
   },
   
   created() {
     this.resetTeams();
+    this.resetGames();
   },
 
   methods: {
@@ -54,8 +48,24 @@ const App = {
       ];
     },
 
+    resetGames () {
+      this.games = [
+        new Game("Unsolicited Diggs Pics", 108.69, "Je ne saquon", 120.99),
+        new Game("King Sacko", 102.95, "Alvin and the Draftcunts", 123.69),
+        new Game("Trevor able to Gibb Chase", 109.55, "The big Lambowski", 121.37),
+        new Game("The Glove Don't Fit", 119.59, "Najee Smugglers", 83.93),
+        new Game("The Fuckest Uppest", 107.72, "Dak Lives Matter", 103.24),
+        new Game("Glasgow Quitters/Losers", 105.7, "Sacks in the city", 105.81),
+      ];
+      this.sortTeams();
+    },
+
     submitScores() {
       this.resetTeams();
+      this.sortTeams();
+    },
+
+    sortTeams() {
       this.games.forEach((game) => {
         let team1 = this.teams.find((team) => team.name === game.team1Name);
         let team2 = this.teams.find((team) => team.name === game.team2Name);
@@ -71,10 +81,7 @@ const App = {
           team1.losses++;
         }
       });
-      this.sortTeams();
-    },
 
-    sortTeams() {
       this.teams.sort(function(team1, team2) {
         if (team1.wins === team2.wins) {
           return team2.points - team1.points;
