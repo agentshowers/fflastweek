@@ -39,6 +39,10 @@ tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
+tr:nth-child(6) {
+  border-bottom: 5px solid black;
+}
+
 /* Styling for the team name column */
 .team-name {
   font-weight: bold;
