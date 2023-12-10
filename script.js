@@ -55,12 +55,12 @@ const App = {
 
     resetGames() {
       this.games = [
-        new Game("Unsolicited Diggs Pics", 108.69, "Je ne saquon", 120.99),
-        new Game("King Sacko", 102.95, "Alvin and the Draftcunts", 123.69),
-        new Game("Trevor able to Gibb Chase", 109.55, "The big Lambowski", 121.37),
-        new Game("The Glove Don't Fit", 119.59, "Najee Smugglers", 83.93),
-        new Game("The Fuckest Uppest", 107.72, "Dak Lives Matter", 103.24),
-        new Game("Glasgow Quitters/Losers", 105.7, "Sacks in the city", 105.81),
+        new Game("Unsolicited Diggs Pics", 110.94, "Je ne saquon", 121.77),
+        new Game("King Sacko", 106.38, "Alvin and the Draftcunts", 127.08),
+        new Game("Trevor able to Gibb Chase", 110.56, "The big Lambowski", 122.93),
+        new Game("The Glove Don't Fit", 115.93, "Najee Smugglers", 81.39),
+        new Game("The Fuckest Uppest", 121.99, "Dak Lives Matter", 111.40),
+        new Game("Glasgow Quitters/Losers", 105.74, "Sacks in the city", 109.46),
       ];
     },
 
